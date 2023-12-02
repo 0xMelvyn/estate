@@ -1,28 +1,13 @@
-import design from '../public/design.png';
 import app1 from '../public/app1.jpg';
 import app2 from '../public/app2.jpg';
 import app3 from '../public/app3.jpg';
 import app4 from '../public/app4.jpg';
 import Image from 'next/image';
-import { BsEnvelopeFill, BsInstagram, BsMessenger } from 'react-icons/bs';
 
 const ventes = () => {
     return (
       <div>
         <main className='bg-white px-8'>
-        <section>
-          <nav className='pt-1 flex justify-between'>
-            <a href="#accueil"><Image src={design} width={250} height={250}/></a>
-            <ul className='flex items-center'>
-              <li><h1 className='text-xl font-Metropolis-Regular hover:underline transition duration-500 px-8'><a href="/">Accueil</a></h1></li>
-              <li><h1 className='text-xl font-Metropolis-Regular hover:underline transition duration-500 px-8'><a href="/ventes">À vendre</a></h1></li>
-              <li><h1 className='text-xl font-Metropolis-Regular hover:underline transition duration-500 px-8 underline'><a href="/location">Location</a></h1></li>
-              <li><h1 className='text-xl font-Metropolis-Regular hover:underline transition duration-500 px-8'><a href="#gestion">Gestion</a></h1></li>
-              <li><h1 className='text-xl font-Metropolis-Regular hover:underline transition duration-500 px-8'><a href="#estimation">Estimation</a></h1></li>
-              <li><h1 className='text-xl font-Metropolis-Regular hover:underline transition duration-500 px-8'><a href="#contact">Contact</a></h1></li>
-            </ul>
-          </nav>
-        </section>
 
         <section className='my-40 flex'>
             <div className='flex justify-around'>
@@ -102,26 +87,6 @@ const ventes = () => {
             </div>
         </section>
         
-        <footer className='absolute left-0 bg-white text-center text-gray-700 w-full'>
-        <hr className="my-6 border-black" />
-          <div className='my-5'>
-            <a href="#accueil"><Image className='mx-auto' src={design} width={250} height={250}/></a>
-            <p className='text-black'>Horaires : </p>
-            <p>Du lundi au samedi de 9h00 à 19h00</p>
-
-            <div className='flex justify-center text-2xl my-5 gap-5'>
-                <a className='hover:text-black transition duration-500' href="https://www.messenger.com/t/100088349492050/" target='_blank'><BsMessenger/></a>
-                <a className='hover:text-black transition duration-500' href="https://t.me/MelvynHoarau" target='_blank'><BsInstagram/></a>
-                <a className='hover:text-black transition duration-500' href="mailto:melvynhoarau@icloud.com" target='_blank'><BsEnvelopeFill/></a>
-            </div>
-
-            <p>contact@immobilier.com</p>
-            <p>07 67 85 68 37</p>
-            <div>
-                <small>&copy; MELVYN WEBDESIGN. All right reserved.</small>
-            </div>
-          </div>
-        </footer>
       </main>
       </div>
     );

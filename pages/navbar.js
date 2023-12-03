@@ -7,7 +7,7 @@ const NavBar = ({ isMobileMenuOpen, toggleMobileMenu }) => {
   return (
     <nav className='pt-1 flex justify-between items-center'>
       <a href="/"><Image src={design} width={250} height={250}/></a>
-      <a className='lg:hidden text-5xl' href="#" onClick={(e) => {
+      <a className='lg:hidden text-5xl mx-2' href="#" onClick={(e) => {
         e.preventDefault();
         toggleMobileMenu();
       }}><LuMenu /></a>

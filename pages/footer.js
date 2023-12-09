@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className='absolute left-0 bg-white text-center text-gray-700 w-full'>
         <hr className="my-6 border-black" />
         <div className='my-5'>
-            <a href="#accueil"><Image className='mx-auto' src={design} width={250} height={250}/></a>
+            <a href="/"><Image className='mx-auto' src={design} width={250} height={250}/></a>
             <p className='text-black'>Horaires : </p>
             <p>Du lundi au samedi de 9h00 à 19h00</p>
 

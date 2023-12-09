@@ -7,41 +7,9 @@ import troisieme from '../public/troisieme.jpeg';
 import quatre from '../public/quatre.jpeg';
 import cinq from '../public/cinq.jpeg';
 import six from '../public/six.jpeg';
-import emailjs from 'emailjs-com';
-import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
   
 export default function Home() {
-
-  const notify = () => toast('Wow so easy!');
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('service_ok34pd9', 'template_yr9yz4q', form.current, 'pGbqVmTvTEyeeMMts')
-      .then(
-        (result) => {
-          toast.success('Email sent!', {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: darkMode ? 'dark' : 'light',
-          });
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-
-    e.target.reset();
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,7 +51,6 @@ export default function Home() {
 
   return (
     <div>
-      <ToastContainer />
       <main className='bg-white px-8'>
         <section className='sm:min-h-screen'>
 
@@ -105,7 +72,7 @@ export default function Home() {
                 L’achat de votre résidence, principale ou secondaire : qu’y a-t-il de plus beau dans une aventure comme celle-ci ? il n’y a aucun doute, le voyage est aussi important que la destination.
                 </p>
                 <p className='text-xl py-2 leading-8 text-black text-right mx-6 underline'>
-                  <a className='hover:text-gray-600' href="#ventes">Nos biens en vente</a>
+                  <a className='hover:text-gray-600' href="/ventes">Nos biens en vente</a>
                 </p>
               </div>
               <div className='flex justify-around pt-14'>
@@ -124,7 +91,7 @@ export default function Home() {
                 <br />
                 BORDAS, c’est aussi une rencontre avec des artistes contemporains, du Street art, des sculpteurs et des peintres venant de tous les continents car les univers de l’art et de l’immobilier se conjuguent autour d’un mot : l’esthétisme
                 </p>
-                <a href="#contact" className='text-xl py-2 leading-8 text-black underline hover:text-gray-600'>Nous contacter</a>
+                <a href="/contact" className='text-xl py-2 leading-8 text-black underline hover:text-gray-600'>Nous contacter</a>
               </div>
         </section>
       </main>

@@ -14,7 +14,7 @@ const AnnoncesPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://estate-example.onrender.com/api/annonces/?populate=*');
+        const response = await fetch('https://estate-strapi.onrender.com/api/annonces/?populate=*');
         const data = await response.json();
 
         // Filtrer les annonces avec l'attribut "vente"
@@ -40,7 +40,7 @@ const AnnoncesPage = () => {
               <div className='pt-5 flex justify-around lg:hidden'>
                 {annonce.attributes.image && annonce.attributes.image.data && annonce.attributes.image.data.length > 0 && (
                   <img
-                    src={`http://localhost:1337${annonce.attributes.image.data[0].attributes.url}`}
+                    src={`${annonce.attributes.image.data[0].attributes.url}`}
                     alt={annonce.attributes.image.name}
                     width={500}
                     height={500}
@@ -60,7 +60,7 @@ const AnnoncesPage = () => {
             <div className='hidden lg:block lg:pt-5 lg:pt-0 lg:w-3/4 flex mx-auto'>
               {annonce.attributes.image && annonce.attributes.image.data && annonce.attributes.image.data.length > 0 && (
                 <img
-                  src={`http://localhost:1337${annonce.attributes.image.data[0].attributes.url}`}
+                  src={`${annonce.attributes.image.data[0].attributes.url}`}
                   alt={annonce.attributes.image.name}
                   width={500}
                   height={500}

@@ -10,7 +10,7 @@ const FicheDetail = () => {
   useEffect(() => {
     const fetchAnnonceDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:1337/api/annonces/${id}/?populate=*`);
+        const response = await fetch(`https://estate-example.onrender.com/api/annonces/${id}/?populate=*`);
         const data = await response.json();
 
         console.log('Réponse de l\'API :', data);
@@ -45,7 +45,7 @@ const FicheDetail = () => {
             {/* Selected image on the left */}
             <img
               className='w-full lg:w-2/3 mb-2 lg:mb-0'
-              src={`http://localhost:1337${selectedImage.attributes.url}`}
+              src={`https://estate-example.onrender.com${selectedImage.attributes.url}`}
               alt={selectedImage.attributes.name}
               width={500}
               height={500}
@@ -57,7 +57,7 @@ const FicheDetail = () => {
                   <img
                     className='hover:scale-105 transition duration-500'
                     key={image.id}
-                    src={`http://localhost:1337${image.attributes.url}`}
+                    src={`https://estate-example.onrender.com${image.attributes.url}`}
                     alt={image.attributes.name}
                     width={500}
                     height={500}

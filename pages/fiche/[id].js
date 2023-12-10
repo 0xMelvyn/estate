@@ -38,7 +38,7 @@ const FicheDetail = () => {
   return (
     <div>
       {annonceDetails ? (
-        <div className='px-20'>
+        <div className='lg:px-20'>
           <h1 className='py-5 text-5xl'>{annonceDetails.Titre}</h1>
           <hr className='border-black w-1/6' />
           <div className='lg:flex lg:gap-2 pt-5'>

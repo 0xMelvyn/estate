@@ -14,7 +14,7 @@ const AnnoncesPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:1337/api/annonces/?populate=*');
+        const response = await fetch('https://estate-example.onrender.com/api/annonces/?populate=*');
         const data = await response.json();
 
         // Filtrer les annonces avec l'attribut "vente"
